@@ -1,7 +1,7 @@
 const tagRE = /\{\{((?:.|\n)+?)\}\}/g;
 
 export function parseText(text) {
-  if (tagRE.test(text)) {
+  if (!tagRE.test(text)) {
     return;
   }
   const tokens = [];
